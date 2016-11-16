@@ -1,0 +1,40 @@
+<div class="row">
+	<div class="col-md-offset-3 col-md-6 col-xs-12">
+
+		<div ng-if="!loggedin">
+			<h4 class="text-center">Guest Login</h4>
+			<form ng-submit="login()">
+				<label for="name">* Name: </label>			
+				<input type="text" id="name" class="form-control" placeholder="Jason Smith" autofocus required autocomplete="name" ng-model="name" ng-keyup="validate('name')">
+				<br />			
+				<label for="bday">* Birth Date: </label>			
+				<input type="date" id="bday" class="form-control" required autocomplete="bday" ng-model="bday" ng-keyup="validate('bday')">
+				<br />	
+				<label for="location">* City and State: </label>			
+				<input type="text" id="location" class="form-control" required placeholder="Los Angeles, CA" autocomplete="address-level2" ng-model="location" ng-keyup="validate('location')">	
+				<br />	
+				<input type="submit" class="btn btn-primary center-block" value="Login">	
+			</form>
+		</div>
+
+		<div ng-if="loggedin">
+			<div class="panel panel-default">
+			  <div class="panel-body main-box">
+			   	
+			   	<div class="panel panel-default" ng-repeat="message in messages">
+			   	  <div class="panel-heading">{{message.name}}</div>
+				  <div class="panel-body">
+				   	{{message.message}}
+				  </div>
+				</div>
+
+			  </div>
+			</div>
+			<form ng-submit="addMessage()">
+				<label class="sr-only" for="newMessage">Type a message: </label>	
+				<input type="text" id="newMessage" class="form-control" placeholder="Type a message" autofocus required ng-model="newMessage">
+				<input type="submit" class="btn btn-primary center-block" value="Post">				
+			</form>
+		</div>
+	</div>	
+</div>

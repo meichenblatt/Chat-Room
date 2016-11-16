@@ -1,0 +1,7 @@
+.main-box {
+	height:500px;
+}
+
+.panel-heading, .panel-body{
+	padding: 5px !important;
+}

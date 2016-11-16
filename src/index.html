@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="ChatApp">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <base href="/">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Chat Room App</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+
+                 <nav class="navbar navbar-default">
+                  <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="/">Techies Chat Room</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                      <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Chat<span class="sr-only">(current)</span></a></li>
+                        <li><a href="/keymetrics">About Us</a></li>
+                        <li><a href="/dataview">Contact Us</a></li>
+                      </ul>
+                    </div><!-- /.navbar-collapse -->
+                  </div><!-- /.container-fluid -->
+                </nav>
+
+                <div class="row" ng-view="">
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    
+    <!--Angular-->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/angular-resource.min.js"></script>
+
+    <script src="js/firebase.js"></script>
+    <script src="js/angularfire.js"></script>
+
+    <!--Application-->
+    <script src="app.js"></script>
+    <script src="js/indexdb.js"></script>
+    <!--Application Controllers-->
+    <script src="controllers/chat.js"></script>
+    <script src="controllers/about.js"></script>
+    <script src="controllers/contact.js"></script>
+    
+</body>
+</html>
