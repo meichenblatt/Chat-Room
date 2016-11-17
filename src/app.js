@@ -1,12 +1,12 @@
-// if ('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator) {
   
-//   navigator.serviceWorker.register('/sw.js', { scope: './'}).then(function(reg) {
-//       console.log("service worker working");  
-//   });
+  navigator.serviceWorker.register('/sw.js', { scope: './'}).then(function(reg) {
+      console.log("service worker working");  
+  });
 
-// } else {
-//   console.log("this browser does NOT support service worker");
-// }
+} else {
+  console.log("this browser does NOT support service worker");
+}
 
 var config = {
     apiKey: "AIzaSyC3wYEORqwLjAL86GigMhLxF1Xx-66pZPg",
@@ -17,7 +17,7 @@ var config = {
   };
 firebase.initializeApp(config);
 
-var ChatApp = angular.module('ChatApp', ['ngRoute', 'ngResource', 'firebase']);
+var ChatApp = angular.module('ChatApp', ['ngRoute', 'firebase']);
 
 ChatApp.config(function ($routeProvider, $locationProvider) {
     $routeProvider
@@ -40,12 +40,3 @@ ChatApp.config(function ($routeProvider, $locationProvider) {
 });
 
 
-ChatApp.service('messages', function($firebaseArray){
-
-  var messages = firebase.database().ref().child('Chat');
-
-  this.getAll = function getAll(){
-    return $firebaseArray(messages);
-  }
-
-});

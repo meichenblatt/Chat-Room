@@ -1,7 +1,24 @@
 .main-box {
 	height:500px;
+	overflow: scroll;
 }
 
 .panel-heading, .panel-body{
-	padding: 5px !important;
+	padding: 2px 5px !important;
+}
+
+.panel{
+	margin-bottom: 8px !important;
+}
+
+.message-panel{
+	width: 80%;
+}
+
+.messageright{
+	margin-left: 20% !important;
+}
+
+.navbar-default .navbar-brand, .navbar-nav>li>a {
+    color: black !important;
 }

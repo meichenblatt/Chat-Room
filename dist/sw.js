@@ -4,19 +4,9 @@ self.addEventListener('install', function(event) {
     caches.open('ChatAppCache').then(function(cache) {
       return cache.addAll([
         '/index.html',
-        '/app.js',
-        '/js/angular.min.js',
-        '/js/angular-resource.min.js',
-        '/js/firebase.js',
-        '/js/angularfire.js',
-        '/js/jquery-3.1.1.min.js',
-        '/js/bootstrap.min.js',
-        '/js/indexdb.js',
+        '/js/all.js',
         '/css/bootstrap.min.css',
         '/css/style.css',
-        '/controllers/chat.js',
-        '/controllers/about.js',
-        '/controllers/contact.js',
         '/tmpl/chat.html',
         '/tmpl/about.html',
         '/tmpl/contact.html'

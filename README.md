@@ -5,12 +5,12 @@ This is my submission for my Capstone Project in the Senior Web Development Nano
 I used AngularJS as the framework and Gulp as the build process.
 
 This Project focuses on:
-*Responsive Design
-*Input Design
-*Offline Functionality
-*Accessibility Standards
-*Home Screen Installable
-*Progressive Web features like push notifications and geolocation
+* Responsive Design
+* Input Design
+* Offline Functionality
+* Accessibility Standards
+* Home Screen Installable
+* Progressive Web features like push notifications and geolocation
 
 
 ## Getting Started
